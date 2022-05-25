@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Progama</title>
+    <style>
+        body {
+            background-color: rgb(124, 124, 211);
+            color: cornsilk;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(233, 196, 104);
+        }
+    </style>
+</head>
+<body >
+    <h1>Olá mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+       
+        window.alert('Seja Bem Vindo!')
+       var confirma= window.confirm('esta gostando de javascript')
+        if(confirma == true){
+       var numero = window.prompt('Digite 1 numero entre 1 e 3 ')
+        document.write("Ola!! voce escolheu o numero\n"+numero);
+        var pos= Number(numero);
+        switch(pos){
+            case 1:
+                
+                document.write("<p style='color:#08f';>\n  E DEU BINGOOO!!!! PARABÉNS \u{1F60E}</p>")
+                document.body.style.color='#0f0';
+                document.body.style.background='url(wallpaper1.jpg)';
+                document.white(bola);
+                break
+            case 2:
+                document.write('\nDOIS');
+                document.body.style.backgroundColor="#00f";
+                break
+            case 3:
+                document.write('\nTRES');
+                document.body.style.backgroundColor="#555";
+                break
+            default:
+                document.write('\nESCOLHEU ERRADO');
+                document.body.style.backgroundColor="#f00";
+        }}else{
+            document.body.style.backgroundColor='#f00';
+            document.write('POR QUE NAO?\n\u{1F615}<br>');
+            var texto = document.createElement('textarea');
+            var botao = document.createElement('input');
+         
+            texto.setAttribute('id','area');
+            texto.setAttribute('cols','30');
+            texto.setAttribute('rows','10');
+            texto.style.borderRadius='5px';
+            texto.style.boxShadow="1px 1px 2px #000";
+            texto.style.fontSize="17pt";
+
+            botao.setAttribute('type','button');
+            botao.setAttribute('value','enviar');
+            botao.setAttribute('id','btn');
+            botao.style.fontSize='20pt';
+            botao.style.color='#008';
+            botao.style.marginLeft='15px';
+            
+
+            botao.addEventListener('click', ()=>{
+                var comentario = document.getElementById('area').value
+                document.write("então você acha que :\n" +comentario);
+                document.body.style.borderRadius='5px';
+                document.body.style.boxShadow="1px 1px 2px #000";
+                document.body.style.fontSize="20pt";
+                document.body.style.backgroundColor='#005';
+                document.body.style.color='#fff';
+                document.body.style.marginTop='250px';
+            })
+
+            document.body.appendChild(texto);
+            document.body.appendChild(botao);
+
+           
+            
+        }
+
+    </script>
+</body>
+</html>

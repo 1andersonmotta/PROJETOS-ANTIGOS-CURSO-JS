@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div#jogador{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            color: blanchedalmond;
+            text-align: center;
+        }
+        div#dv1{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            left:20px;
+            top:150px;
+        }
+    </style>
+    <script>
+        var dx;
+        var dy;
+        var px;
+        var py;
+        var vel;
+        var jog;
+        var anima;
+        var mov;
+        function inicia(){
+            dx=1;
+            px=0;
+            dy=0;
+            py=0;
+            vel=1;
+            move=1;
+            jog=document.getElementById("jogador");
+            jog.addEventListener("click", moverParar)
+            var para= document.getElementById("para").addEventListener("click",parar);
+            var volta=document.getElementById("começa").addEventListener("click",mover);
+            
+
+            
+            
+            
+            game()
+        }
+        function game(){
+            
+            px+=dx*vel;
+            jog.style.left=px+"px";
+            if(px>400){
+                dx=-1
+            }else if (px<=0){
+                dx=1
+            }
+            anima= requestAnimationFrame(game);
+        }
+        function moverParar(){
+            if(move){
+                move=0
+                jog.style.backgroundColor="#eed";
+                jog.style.border="1px solid #000";
+                jog.style.color="#000"
+                cancelAnimationFrame(anima);
+
+            }else{
+                move=1
+                jog.style.backgroundColor="#000";
+                jog.style.color="#fff";
+
+                anima=requestAnimationFrame(game);
+            }
+            
+        }
+        function parar(){
+            if(move){
+                move=0
+                jog.style.backgroundColor="#f00";
+
+                cancelAnimationFrame(anima);
+            }
+              
+         }
+         function mover(){
+             if(!move){
+                 move=1
+                 jog.style.backgroundColor="#0f0";
+
+                 anima=requestAnimationFrame(game);
+
+             }
+         }
+        window.addEventListener("load",inicia);
+
+        var anima;
+        var angulo=0;
+        function girar(){
+            var objt=document.getElementById("dv1");
+            objt.style.transform="rotate("+angulo+"deg)";
+            angulo++
+
+            if(angulo>90){
+                objt.style.backgroundColor="#f00"
+            }
+            if(angulo>180){
+                objt.style.backgroundColor="#0f0"
+            }
+            if(angulo>270){
+                objt.style.backgroundColor="#00f"
+            }
+            if(angulo>360){
+                angulo=0
+                objt.style.backgroundColor="#000"
+            }
+            requestAnimationFrame(girar);
+
+        }
+        
+        window.addEventListener("load",girar)
+
+    </script>
+
+
+
+    <div id="dv1"></div>
+
+    <input id="para" type="button" value="para">
+    <input id="começa" type="button" value="começa">
+
+    <div id="jogador">SS</div>
+</body>
+</html>

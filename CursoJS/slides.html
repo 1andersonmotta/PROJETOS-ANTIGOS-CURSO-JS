@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:500px;
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slide"></div>
+
+    <script>
+        var slide=[];
+        var divSlide;
+        var slideAtual;
+        var maxImg;
+
+        function inicia(){
+            preCarregar();
+            divSlide=document.getElementById("slide");
+            slideAtual=0
+            maxImg=slide.length-1;
+            setInterval(troca,2000);
+
+
+        }
+
+        function preCarregar(){
+            var s=1
+            for(var i=0; i<4 ;i++){
+                slide[i]= new Image()
+                slide[i].src="s"+s+".jpg"
+                s++
+            }
+        }
+
+        function carregar(img){
+            divSlide.style.backgroundImage="url('"+slide[img].src+"')";
+        }
+      
+        function troca(){
+            slideAtual++
+            if(slideAtual>maxImg){
+                slideAtual=0
+            }
+            carregar(slideAtual);
+        }
+
+        window.addEventListener("load",inicia);
+        
+    </script>
+
+    
+</body>
+</html>

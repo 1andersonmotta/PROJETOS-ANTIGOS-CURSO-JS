@@ -1,0 +1,70 @@
+<html>
+<body>
+
+<p id="cabecalho">
+
+Meu programa em JavaScript - LISTA
+
+</p>
+
+
+<p id="lista" style="background-color: #cccccc">
+
+Lista
+
+</p>
+
+
+<p id="acoes">
+
+<input type="text" id="prod">
+
+<input type="button" value="Adicionar Item" onclick="inserirItem(p);">
+
+<input type="button" value="Remover Item" onclick="removerItem(p);">
+
+<input type="button" value="Atualizar Lista" onclick="exibirLista(p);">
+
+</p>
+
+</body>
+
+<script>
+
+    var minhaLista = ["arroz","feijao","sal"];
+
+    function exibir(arr){
+        var txt="";
+
+        for(i=0 ;i<=arr.length-1 ;i++){
+            txt += i +" "+ arr[i] +"<br>";
+        }
+    document.getElementById("lista").innerHTML=txt
+    }
+
+    function inserirItem(arr){
+        var novoItem= document.getElementById("prod").value;
+        if(novoItem!=null && novoItem!=""){
+            arr.push(novoItem);
+        }else{
+            alert("erro no produto");
+        }
+    exibir(arr)
+    }
+
+    function removerItem(arr){
+        var item = prompt("qual indice do produto deletado?");
+
+        if(item!=null && item!=""){
+        arr.splice(item,1);
+        }else{
+            alert("numero inválido");
+        }
+        exibir(arr);
+    }
+    exibir(minhaLista)
+</script>
+
+
+
+</html>

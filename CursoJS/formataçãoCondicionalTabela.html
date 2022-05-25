@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;          
+
+        }
+       table,td,th,tr{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <table id="tabela">
+        <tr>
+            <th>Alunos</th><th>Nota 01</th><th>Nota 02</th><th>resultado</th>
+        </tr>
+        <tr>
+            <td>Anderson</td><td>70</td><td>80</td><td id="n1"></td>
+        </tr>
+        <tr>
+            <td>aluno01</td><td>40</td><td>50</td><td id="n2"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var notas
+        var tab=document.getElementById("tabela")
+        for(var i = 1; i<tab.rows.length;i++){
+            notas= parseFloat(tab.rows[i].cells[1].innerHTML)+parseFloat(tab.rows[i].cells[2].innerHTML );
+            tab.rows[i].cells[3].innerHTML=notas
+        }
+        n=[]
+        n[0]=document.getElementById("n1")
+        n[1]=document.getElementById("n2")
+
+        for(var i=0;i<tab.rows.length;i++){
+        if(n[i].innerHTML>100){
+            n[i].style.color="#0f0"
+
+        }else{
+            n[i].style.color="#f00"
+
+        }
+    }
+        
+    </script>
+</body>
+</html>

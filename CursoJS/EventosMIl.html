@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="cor(document.getElementById('h1'), '#'+ Math.round(Math.random()*1000))">
+    <script>
+        function pos(obj){
+            obj.style.position="absolute";
+            obj.style.left=Math.random()*500+'px';
+            obj.style.top=Math.random()*500+'px';
+
+        }
+        function cor(obj,cor){
+           var obj= document.getElementById('h1'); 
+            var cor='#'+ Math.round(Math.random()*1000)
+            obj.style.color=cor;
+        }
+        var time = setInterval(cor,500);
+        function mudaCor(){
+            
+        }
+    </script>
+    <h1 id="h1">PARABÉNS VOCÊ GANHOU 200 MIL REAIS!!<br> CLIQUE NO BOTAO E RECEBA SEU PRÊMIO!!</h1>
+        <input  type="button" value="Clique aqui" onmouseover="pos(this)">
+        <input type="button" value="vai" onclick="cor()">
+</body>
+</html>

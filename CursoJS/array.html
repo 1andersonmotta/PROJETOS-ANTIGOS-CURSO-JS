@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cor = [];
+
+        cor[0]="azul";
+        cor.push("amarelo");
+        cor[2]="marron";
+        cor.push("rosa");
+        cor[cor.length]="verde";
+        document.write(cor);
+        console.log(cor);
+
+        var mochila = [
+            carteira=[
+                nacional=[
+                moedas=[5,50,1],
+                notas=[20,100,200]
+                ],
+                internacional=[1,2,3]
+            ]
+        ]
+        document.write(mochila);
+
+        var casa = [["jardin",3,8],["cozinha",5,8],["sala",1]]
+        /* for(let i=0; i<casa.length;i++){
+            let u =0
+            while(u<i.length){
+                            document.write("<br>",casa[i][u]);
+                            u++
+
+            }
+        }*/
+        let n=0
+        while (n<3) {
+            document.write("<br>",casa[n]);
+            n++
+            
+        }
+    </script>
+</body>
+</html>

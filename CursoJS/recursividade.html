@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <script>
+        function contador(min,max){
+            document.write(min+"<br>");
+            if(min<max){
+                contador(++min,max)
+            }
+        }
+        contador(0,10);
+        function fatorial(n){
+            if(n==1){
+                return 1
+            }
+            return n*fatorial(n-1);
+        }
+        document.write(fatorial(5));
+
+        var n2=1;
+       var n1;
+       var tot;
+       function recursividade(n1){ //subtituição de laço chamando a funçao dentro dela
+            if(n2<=10){  
+          
+                 tot= n1*n2
+                console.log(`o valor ${n1} X ${n2} = ${tot}`);
+                n2++
+
+               recursividade(n1)
+           }
+       }
+       recursividade(8)
+       
+
+        
+        
+       
+        
+    </script>
+
+</body>
+</html>

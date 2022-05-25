@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Conta Poupança</p>
+
+    <p id="saldo">Saldo</p>
+    <p><input type="text" id="entrada"></p>
+    <p><input type="button" value="depositar" id="deposito" onclick="depositar()"></p>
+    <p><input type="button" value="saque" id="saque" onclick="sacar()"></p>
+    <p><input type="button" value="extrato" id="extrato" onclick="extrato()"></p>
+    <p id="res"></p>
+</body>
+
+    <script>
+        var saldo = document.getElementById("saldo");
+        var deposito = document.getElementById("deposito");
+        var entrada = document.getElementById("entrada");
+        var res = document.getElementById("res");
+        var tot =0
+        var banco=[]
+        var date = new Date();
+        var dia = date.getDate();
+        var mes = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+        var month = date.getMonth();
+        var hora = date.getHours();
+
+        function depositar(){
+            if(entrada.value>0){
+                tot += Number(entrada.value);
+                saldo.innerHTML= tot;
+                banco.push(" dia "+dia+" de "+mes[month]+ " ás "+hora+"hrs um depósito de: R$"+entrada.value);
+                entrada.value="" 
+            }else{
+                alert("valor inválido para depósito")
+                entrada.value="" 
+            }
+        }
+        function sacar(){
+            if(entrada.value> tot && entrada.value<=0){
+                alert("saldo ou valor inválido para saque")
+                entrada.value="" 
+            }else{
+                tot -= Number(entrada.value);
+                saldo.innerHTML= tot;
+                banco.push( "dia "+dia+" de "+mes[month]+" ás "+hora+"hrs um saque de: R$"+entrada.value);
+            }
+            entrada.value="";
+        }   
+        function extrato(){
+            res.innerHTML='';
+            for(var i=0 ; i<banco.length ;i++){
+                res.innerHTML += banco[i]+"<br>";
+            }
+        }
+    </script>
+</html>

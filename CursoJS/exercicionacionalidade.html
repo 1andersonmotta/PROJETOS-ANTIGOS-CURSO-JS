@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    Qual sua Nacionalidade? <input type="string" name="info" id="info">
+    <input type="button" value="Verificar" onclick="conferir()">
+    <div id="res">
+
+    </div>
+    <script>
+        function conferir(){
+            var pais = window.document.getElementById('info')
+            var res = window.document.getElementById('res')
+            var nac = String(pais.value).toLocaleLowerCase()
+        
+            res.innerHTML =`<p>Bem vindo ${nac}</p>`
+            
+            // res.innerHTML = nac === 'brasileiro' ? 'irmao' : '<strong>vaza!</strong>'
+
+            if (nac === 'brasileiro'){
+                res.innerHTML += `irmao`
+            }else
+                res.innerHTML += `<strong>vaza!</strong>`;
+            
+        }
+        
+    </script>
+
+
+</body>
+</html>

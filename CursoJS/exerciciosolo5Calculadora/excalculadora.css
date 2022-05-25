@@ -1,0 +1,57 @@
+body{
+background: url('calculadora.jpg') no-repeat;
+width: 100%;
+height: 100%;
+background-position-x: 0px;
+background-position-y: -1050px;
+background-size: 1800px;
+}
+
+p#tit{
+    font:normal 35pt Arial;
+    margin-top: 0.5cm;
+    margin-left: 900px;
+    text-shadow: 1px -1px 2px white;
+}
+p{
+    font:normal 20pt arial;
+    margin-left: 1cm;
+    margin-left: 900px;
+
+    text-shadow: 1px -1px 2px white;
+
+     
+}
+input{
+    font: normal 15pt arial;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 2px black;
+}
+
+input#cal{
+    font: normal 20pt arial;
+    margin-left: 900px;
+    margin-bottom: 1cm;
+    text-shadow: 1px -1px 2px white;
+
+}
+div#res{
+    position: absolute;
+    text-align: center;
+    width: 440px;
+    height: 250px;
+    top: 190px;
+    left: 300px;
+    font: normal 54pt Arial;
+    text-shadow: 1px -1px 2px white;
+    
+    
+
+}
+div#bod{
+    
+    border-radius: 10px;
+    
+    
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div#slides{
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+    <div id="slides"></div>
+
+    <script>
+       var imgs=[];
+       var slide;
+       var imgAtual;
+       var maxImg;
+       
+
+       function preCarregar(){
+           var s=1
+           for(var i =0;i<4;i++){
+               imgs[i]=new Image();
+               imgs[i].src="s"+s+".jpg";
+               s++
+           }
+       }
+       function carregar(img){
+           slide.style.backgroundImage="url("+imgs[img].src+")";
+       }
+       function inicia(){
+            preCarregar()
+
+            imgAtual=0
+            maxImg=imgs.length-1
+            slide=document.getElementById("slides")
+            carregar(imgAtual)
+
+            setInterval(mudar,2000)
+       }
+       function mudar(){
+            imgAtual++
+            if(imgAtual>maxImg){
+                imgAtual=0
+            }
+            carregar(imgAtual)
+
+        }
+       window.addEventListener("load",inicia);
+    </script>
+</body>
+</html>

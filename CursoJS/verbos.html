@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>VERBOS</p>
+
+    <p>Digite um Verbo</p>
+    <p><input id="verbo" ></p>
+    <p><input type="button" id="botao" value="Ok" onclick="ver()"></p>
+    <p id="linha"></p>
+
+    <script>
+
+        function ver(){
+            var verbo = document.getElementById("verbo").value
+            var substratoVerbo = verbo.substr(0, verbo.length-2);
+            var pessoa = ['Eu', 'Tu', 'Ele', 'Nós', 'Vós', 'Eles'];
+            var fimVerbo = ['o', 'as', 'a', 'mos', 'ais', 'am'];
+            var substratoFinal = verbo.substr(verbo.length-2);
+            var linha = document.getElementById("linha")
+            linha.innerHTML="";
+            
+
+           
+
+            switch(substratoFinal){
+                case "ar": fimVerbo = ['o', 'as', 'a', 'amos', 'ais', 'am'];
+                    break;
+                case "er": fimVerbo = ['o', 'es', 're', 'emos', 'eis', 'em'];
+                    break;
+                case "ir": fimVerbo = ['o', 'es', 'e', 'imos', 'is', 'em'];
+                    break;
+                default:
+                    substratoFinal=0;
+
+            }
+
+            if(substratoFinal!= 0 && substratoFinal!=""){
+                for(i=0 ;i<=pessoa.length-1 ; i++){
+                    linha.innerHTML += pessoa[i] +" "+ substratoVerbo.toUpperCase() + fimVerbo[i].toUpperCase() +'<br>';
+                    
+
+                }
+            }else {
+            alert("Palavra Inválida")
+            }  
+        }
+
+
+    </script>
+</body>
+</html>

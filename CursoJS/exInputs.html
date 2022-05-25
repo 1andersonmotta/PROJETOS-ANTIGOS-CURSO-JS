@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="exInputs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>Exercicio de Inputs</p>
+
+    <form action="">
+        <fieldset id="usuario">
+            <legend>Usuário</legend>
+            <p><label for="nome">Nome:</label><input type="text" id="nome" size="30" maxlength="50" placeholder="nome completo"></p>
+            <p><label for="idade">Data de Nascimento:</label><input type="date" id="idade"></p>
+            <p><label for="sexo">Sexo:</label></p>
+            <p><input type="radio" name="sex" id="masc" checked>Masculino
+            <input type="radio" name="sex" id="fem">Feminino <input type="radio" name="sex" id="idf">Idefinido</p>
+            <p><label for="cor">Cor dos Olhos</label> <input type="color" name="cor" id="cor"></p>
+            <p><label for="raca">Etinia:</label><br> </p><p> Branco<input type="checkbox" name="raca" id="branco">
+                Negro<input type="checkbox" name="raca" id="negro" >
+                Pardo<input type="checkbox" name="raca" id="pardo" ></p>
+            <p><label for="senha">Senha:</label><input type="password" id="senha" size="30" placeholder="crie uma senha de até 8 dígitos"></p>
+        </fieldset>
+
+        <fieldset id="endereco">
+            <legend>Endereço do Usuário</legend>
+            <p><label for="cidade">Cidade:</label>
+            <select name="cidade" id="cidade">
+                <option value="Sorocaba">Sorocaba</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+            </select></p>
+            <p><legend>Bairro</legend>
+            <select name="bairro" id="bairro">
+                <optgroup label="Zona Norte">
+                    <option value="Quebrada">Vila Helena</option>
+                    <option value="Quebrada">Vitória Régia</option>
+                </optgroup>
+                <optgroup label="Zona Sul">
+                    <option value="Burguesia">Campolim</option>
+                    <option value="Jardin São Carlos">Jardin São Carlos</option>
+                </optgroup>
+            </select></p>
+            <p><label for="rua">Rua:</label><input type="text" id="rua" size="80" maxlength="120" placeholder="Antonio José Castronovo"></p>
+            <p><label for="numero">Numero:</label><input type="number" id="numero" size="7" maxlength="30" min="0" max="999999"></p>
+            <p><label for="cep">CEP:</label><input type="number" id="cep" size="20" maxlength="20" placeholder="18-095-070" min="0" max="999999"></p>
+
+        </fieldset>
+        <fieldset id="curtiu">
+            <legend>Grau de Satistação</legend>
+            <p><label for="sat">Satisfeito? </label>Não<input type="range" id="sat" step="10" min="0" max="20" >Sim</p>
+        </fieldset>
+        <fieldset id="comentario">
+            <p><label for="com">Comentário:</label> <br>
+            <textarea name="com" id="com" cols="30" rows="10" placeholder="Deixe aqui seu comentário"></textarea>
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <label for="salvar"><input type="button" value="Salvar" id="salvar" onclick="exibir()"></label>
+        </fieldset>
+        <p id="res"></p>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body{
+    background: url('fotonoite1.png') ;
+    background-size: 100%;
+}
+div{
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    height: 530px;
+    border-radius: 8px;
+    margin-left: 11.5cm;
+    box-shadow: 8px -8px 6px black;
+}
+h1{
+    font: normal 40pt italic;
+    text-shadow: 1px -1px 2px rgba(67, 118, 160, 0.884);
+}
+p{
+    font:normal 25pt italic;
+    text-shadow: 2px -2px 2px rgb(134, 134, 134);
+}
+p#res{
+    font: normal 19pt italic;
+    text-shadow: 2px -2px 2px rgb(129, 127, 127);
+}
+input{
+    font: normal 14pt italic;
+    box-shadow: 2px -2px 2px rgba(136, 134, 134, 0.884);
+    border-radius: 5px;
+}

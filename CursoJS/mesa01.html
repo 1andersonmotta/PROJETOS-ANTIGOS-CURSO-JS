@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mesa</title>
+    <script src="pastelaria.js"></script>
+    <link rel="stylesheet" href="pastelaria.css">
+
+</head>
+<body>
+    <div>
+    <header>BELL PASTEL</header>
+        <h1><input type="radio"  name="radiox" id="pastel"  onclick="verificarRadio()">
+        <label for="pastel" >Pastel</label>
+        <input type="radio"  name="radiox" id="refri" onclick="verificarRadio()" >
+        <label for="refri" >Refrigerante</label>
+        <input type="radio"  name="radiox" id="Suco" onclick="verificarRadio()" >
+        <label for="Suco" >Suco</label>
+        </h1>
+    <h1>Quantidade: <input type="number" id="quantidade" value="1" ></h1>
+    <h1>Produto: <input type="string" id="produto" placeholder="produto"></h1>
+    <h1>Valor do Produto: <input type="text" id="valores" placeholder="valor unitário"></h1>
+    <input type="button" value="Adicionar" onclick="adicionar()"><br><br>
+    <input type="number" id="recebi" placeholder="recebi">
+    <input type="button" value="Fechar pedido" onclick="entrou()">
+    <input type="button" value="Voltar" onclick="voltar()">
+   
+</div>
+    <div id="dv1">
+        <h1 id="p"></h1>
+        <h1 id="array"></h1>
+        <h1 id="res"></h1>
+        <h1 id="troco"></h1>
+    </div>
+        
+
+    
+</body>
+</html>

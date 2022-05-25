@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div" onclick="ativar()"></div>
+
+    <script>
+        var px = 0;
+        var py = 0;
+        function move(){
+            
+            var obj= document.getElementById("div");
+            obj.style.backgroundColor="#f00"
+            var tecla = event.keyCode;
+            if (tecla == 37){
+                px-=10 ;
+                obj.style.left=px + "px";
+            }else if (tecla == 38){
+                py-=10;
+                obj.style.top=py + "px";
+            }else if (tecla == 39){
+                px+=10;
+                obj.style.left=px + "px";
+            }else if (tecla == 40){
+                py+=10;
+                obj.style.top=py + "px";
+            }else if (tecla == 13){
+                alert("evento movedown removido");
+                document.removeEventListener('keydown',move);
+                obj.style.backgroundColor="#fff"
+            }
+        }
+        function ativar(){
+            var obj= document.getElementById("div");
+            alert("Ativado evento keydown");
+            document.addEventListener('keydown',move);
+            obj.style.backgroundColor="#f00"
+        }
+    </script>
+
+</body>
+</html>

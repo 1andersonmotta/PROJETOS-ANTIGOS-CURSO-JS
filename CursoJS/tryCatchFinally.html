@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //tratamento de erro
+        /* var num;
+
+        try{
+            num=prompt("Digite um valor");
+            if(num>10){
+                throw new Error("Valor Inválido!!"+num+" Digite um valor menor que 10<br>");
+            }
+            document.write("valor:" + num);
+        }catch(e){
+            //a variavel "e" armazena o valor passa se a condição em If for verdadeira e  ERROR sera aceito. 
+            document.write("ERRO:" + e.message);
+            // .message para mostrar o valor/mensagem dentro do ERROR
+        }finally{
+            document.write("<br> Fim do Tratamento de erro com try, catch e finnaly")
+            //finally sempre sera exibido entao pode se ocultar o erro ao usuario, alterar o valor para aceitavel e mostrar corrigido somente no finally.
+        }*/
+        var date;
+
+        try{
+            date=prompt("digite uma data ");
+            if(date>20){
+                throw new Error("erro!!");
+            }
+            document.write("valor ok ="+ date);
+        }catch(e){
+            document.write(e.message)
+        }finally{
+                document.write("<br>finaly \n" + date + " \n acabou o try!!")
+            }
+
+    </script>
+
+</body>
+</html>

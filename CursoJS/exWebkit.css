@@ -1,0 +1,56 @@
+
+ul{
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+li{
+    float: left;
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+li span{
+    opacity: 1;
+    color: wheat;
+    background-color: black;
+}
+
+
+li#foto01{
+    background: url('virtual1.jpg');
+    background-position: 50% 50%;
+    background-size: 250px 250px;
+    transition: all 1s ease;
+}
+li#foto01:hover{
+    transform: scale(1.5);
+    background-position:0px 0px;
+    background-size: 250px 250px;
+
+}
+
+
+li#foto02{
+    background: url('wallpaper.png');
+    transition: all 1s ease-in;
+}
+li#foto02:hover{
+    transform: scale(1.5);
+}
+
+li#foto03{
+    background: url('wallpaper.png') ;
+    background-size: 100% 100%;
+}
+li#foto03:hover{
+    transform: scale(1.4);
+    border: rgb(190, 22, 22) solid 4px;
+    background-size: 100% 100%;
+    
+}

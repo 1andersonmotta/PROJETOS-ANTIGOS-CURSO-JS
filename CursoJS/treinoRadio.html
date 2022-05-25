@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="radio" id="nome1" >
+    <label for="nome1"  onclick="mostrar()">Nome</label>
+    <input type="text" name="texto" id="texto">
+
+    <p id="valorUn"></p>
+    <p id="nome"></p>
+    <p id="res"></p>
+
+
+    <script>
+        function mostrar(){
+            text = document.getElementById("texto").value = 10;
+            valorUn= document.getElementById("valorUn").value = 5;
+            nome = document.getElementById("nome").innerHTML= "Nome"
+            res = document.getElementById("res").innerHTML = valorUn + text ;
+
+        }
+        var array = [1,2,3,"Anderson","livia"];
+
+        function test(array){
+           var arrays=[]
+            for(var i=0;i<array.length;i++){
+                if (typeof array[i] === "string"   ){
+                    arrays.push(array[i])
+                }
+            }
+            console.log(arrays)
+        }
+        test(array);
+    </script>
+</body>
+</html>
